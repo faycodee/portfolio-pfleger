@@ -36,7 +36,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <div className="flex items-center gap-4 md:hidden">
             <ThemeToggle />
-            <LanguageToggle />
+            {/* <LanguageToggle /> */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 dark:text-gray-300 focus:outline-none"
