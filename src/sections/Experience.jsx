@@ -1,43 +1,75 @@
-// src/sections/Experience.jsx
-import FadeInSection from '../components/FadeInSection';
-import { useTranslation } from '../contexts/translationContext';
-
 import { EXPERIENCE_DATA } from '../configs/data/experience';
+import FadeInSection from '../components/FadeInSection';
+import { FaUserGraduate, FaHospital, FaClinicMedical, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Experience = () => {
-  const { t } = useTranslation();
-  return (
-    <section id="experience" className="min-h-screen flex items-center py-20 px-6 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto max-w-4xl">
-        <FadeInSection>
-          <h2 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-white">
-            { t.sections.experience }
-          </h2>
-        </FadeInSection>
-        <div className="relative">
-          {/* Línea central del timeline */}
-          <div className="absolute left-8 md:left-1/2 top-0 w-0.5 h-full bg-blue-200 dark:bg-blue-900 transform -translate-x-0.5 hidden md:block"></div>
+  // Mapping Icons based on type
+  const getIcon = (iconType) => {
+    switch (iconType) {
+      case 'education': return <FaUserGraduate />;
+      case 'work': return <FaHospital />;
+      default: return <FaClinicMedical />;
+    }
+  };
 
-          {EXPERIENCE_DATA.map((exp, i) => (
-            <FadeInSection key={i} delay={i * 0.1}>
-              <div className={`flex flex-col md:flex-row ${i % 2 === 0 ? 'md:flex-row-reverse' : ''} mb-8`}>
-                {/* Card */}
-                <div className={`w-full md:w-1/2 ${i % 2 === 0 ? 'md:pr-8 md:pl-16' : 'md:pl-8 md:pr-16'}`}>
-                  <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-600">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{t.experience.roles[exp.id]}</h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-medium">{exp.company}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{exp.period}</p>
-                    <p className="mt-3 text-gray-700 dark:text-gray-300">{t.experience.descriptions[exp.id]}</p>
+  return (
+    <section id="experience" className="py-24 px-6 bg-white dark:bg-[#0f172a] transition-colors duration-500">
+      <div className="container mx-auto max-w-5xl">
+        
+        {/* Header - Professionell & Linksbündig */}
+        <div className="mb-20 border-l-4 border-emerald-500 pl-6">
+          <h2 className="text-sm font-black uppercase tracking-[0.3em] text-emerald-600 mb-2">
+            Werdegang
+          </h2>
+          <h3 className="text-4xl font-bold text-slate-900 dark:text-white">
+            Berufserfahrung & <span className="text-emerald-600">Ausbildung.</span>
+          </h3>
+        </div>
+
+        <div className="relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-4 md:left-8 top-0 w-px h-full bg-slate-200 dark:bg-slate-800"></div>
+
+          <div className="space-y-12">
+            {EXPERIENCE_DATA.map((exp, i) => (
+              <FadeInSection key={i} delay={i * 0.1}>
+                <div className="relative pl-12 md:pl-20 group">
+                  
+                  {/* Timeline Dot / Icon */}
+                  <div className="absolute left-0 md:left-4 top-0 w-8 h-8 md:w-10 md:h-10 bg-white dark:bg-slate-900 border-2 border-emerald-500 rounded-full flex items-center justify-center text-emerald-600 z-10 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-lg">
+                    {getIcon(exp.icon)}
+                  </div>
+
+                  {/* Content Card */}
+                  <div className="bg-[#f8fafc] dark:bg-slate-800/50 p-6 md:p-8 rounded-[2rem] border border-slate-100 dark:border-slate-700 hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/5 transition-all duration-500">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
+                      <div>
+                        <span className="inline-block px-3 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold uppercase tracking-widest rounded-md mb-2">
+                          {exp.period}
+                        </span>
+                        <h4 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white">
+                          {exp.role}
+                        </h4>
+                      </div>
+                      <div className="flex items-center gap-2 text-slate-400 dark:text-slate-500 text-sm">
+                        <FaMapMarkerAlt />
+                        <span>{exp.location}</span>
+                      </div>
+                    </div>
+
+                    <p className="text-emerald-600 dark:text-emerald-400 font-semibold mb-3 flex items-center gap-2">
+                      <span className="w-4 h-px bg-emerald-500"></span>
+                      {exp.company}
+                    </p>
+                    
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                      {exp.desc}
+                    </p>
                   </div>
                 </div>
-
-                {/* Punto en la línea */}
-                <div className="flex items-center justify-center">
-                  <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-800 shadow-md z-10"></div>
-                </div>
-              </div>
-            </FadeInSection>
-          ))}
+              </FadeInSection>
+            ))}
+          </div>
         </div>
       </div>
     </section>

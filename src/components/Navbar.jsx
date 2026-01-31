@@ -14,8 +14,8 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <h1 className="text-xl font-bold text-blue-600 dark:text-blue-400">
-           Mohamed
+          <h1 className="text-xl font-bold text-emerald-600 dark:text-emerald-400">
+           Portfolio
           </h1>
 
           {/* Desktop Menu */}
@@ -24,7 +24,7 @@ const Navbar = () => {
               <a
                 key={item.id}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                className="text-gray-700 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200"
               >
                 {t.nav[item.id]}
               </a>

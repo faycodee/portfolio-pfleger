@@ -36,51 +36,19 @@ import { BsSpeedometer } from 'react-icons/bs';
 import { MdArchitecture } from 'react-icons/md';
 import { DiRedis } from 'react-icons/di';
 
-export const SKILLS_DATA = [
-  {
-    id: "frontend",
-    items: [
-      { name: "react", icon: FaReact },
-      { name: "javascript", icon: SiJavascript },
-      { name: "typescript", icon: SiTypescript },
-      { name: "tailwind", icon:  SiTailwindcss}
-    ]
-  },
-  {
-    id: "backend",
-    items: [
-      { name: "python", icon: FaPython },
-      { name: "nodejs", icon: FaNodeJs },
-      { name: "express", icon: SiExpress },
-    ]
-  },
-  {
-    id: "devops",
-    items: [
-      { name: "docker", icon: SiDocker },
-      { name: "git", icon: SiGithub },
-    ]
-  },
-  {
-    id: "databases",
-    items: [
-      { name: "postgresql", icon: SiPostgresql },
-      { name: "mysql", icon: SiMysql },
-      { name: "mongodb", icon: SiMongodb },
-      { name: "redis", icon: DiRedis }
-    ]
-  },
-  {
-    id: "testing",
-    items: [
-      { name: "jest" },
-      { name: "playwright" }
-    ]
-  },
-  {
-    id: "other",
-    items: [
-      { name: "languages", icon: SiCplusplus },
-    ]
-  }
-];
+export const SKILLS_DATA = {
+  hardSkills: [
+    { name: "Grundpflege", icon: "FaHandHoldingHeart" },
+    { name: "Behandlungspflege", icon: "FaStethoscope" },
+    { name: "Dokumentation", icon: "FaFileMedical" },
+    { name: "Notfallmanagement", icon: "FaFirstAid" }
+  ],
+  softSkills: [
+    "Empathie", "Belastbarkeit", "Teamfähigkeit", "Zuverlässigkeit"
+  ],
+  languages: [
+    { lang: "Deutsch", level: "B2 (Zertifiziert)", percentage: 80 },
+    { lang: "Arabisch", level: "Muttersprache", percentage: 100 },
+    { lang: "Französisch", level: "Fließend", percentage: 85 }
+  ]
+};

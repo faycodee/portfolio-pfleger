@@ -23,4 +23,14 @@ export const SITE_DATA = {
     email: "yassine.elamrani@email.ma"
   },
   cvUrl: '/cv/resume-example.pdf', // 👈 Sube tu CV a public/cv/
+  gallery: {
+    title: "Qualifikationen & Einblicke",
+    subtitle: "Zertifikate und Impressionen aus meiner praktischen Arbeit.",
+    items: [
+      { title: "B2 Deutsch Zertifikat", category: "Sprachen", img: "/gallery/1.png" },
+      // { title: "Staatliches Diplom", category: "Bildung", img: "/diploma.jpg" },
+      // { title: "Praktikum bei Ford", category: "Werkstatt", img: "/ford-work.jpg" },
+      // { title: "LKW Ersatzteile Management", category: "Berufserfahrung", img: "/truck-parts.jpg" }
+    ]
+  }
 };

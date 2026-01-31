@@ -10,6 +10,7 @@ import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Contact from './sections/Contact'
 import Footer from './components/Footer'
+import Gallery from './components/Gallery'
 import SEO from './components/SEO'
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Gallery/>
       <Skills />
-      <Projects />
+      {/* <Projects /> */}
       <Experience />
       <Education />
       <Contact />

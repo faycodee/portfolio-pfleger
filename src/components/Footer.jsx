@@ -85,9 +85,7 @@ const Footer = () => {
 
         {/* Línea divisoria y mensaje final */}
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">
-            { t.footer.developedBy } { t.site.name}
-          </p>
+         
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
             © {new Date().getFullYear()} - { t.footer.rights }
           </p>

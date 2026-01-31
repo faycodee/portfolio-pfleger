@@ -1,23 +1,32 @@
 // src/configs/data/experience.js
-export const EXPERIENCE_DATA = [
+export  const EXPERIENCE_DATA = [
+
   {
-    id: "senior-dev",
-    company: "Tech Innovations Inc.",
-    period: "2020 - Present"
+    id: "nursing_ma",
+    role: "Pflegefachkraft (Staatliches Diplom)",
+    company: "Hôpital Universitaire (CHU)",
+    location: "Fes, Marokko",
+    period: "2022 - 2024",
+    desc: "Vollzeitpflege auf der chirurgischen Station. Durchführung von Grund- und Behandlungspflege sowie Wundversorgung.",
+    icon: "work"
+  },
+
+  {
+    id: "internship",
+    role: "Pflegepraktikum (Geriatrie)",
+    company: "Lokale Gesundheitsklinik",
+    location: "Fes, Marokko",
+    period: "2022 – 2023",
+    tasks: ["Unterstützung im Alltag", "Vitalzeichenkontrolle", "Hygiene-Management"]
   },
   {
-    id: "dev-lead",
-    company: "Digital Solutions Co.",
-    period: "2018 - 2020"
+    id: "internship",
+    role: "Praktikant in der Altenpflege",
+    company: "Privatklinik Atlas",
+    location: "Fes, Marokko",
+    period: "2021 - 2022",
+    desc: "Unterstützung bei der täglichen Mobilisation und Körperpflege von Senioren. Dokumentation nach klinischen Standards.",
+    icon: "intern"
   },
-  {
-    id: "frontend-dev",
-    company: "WebCraft Studio",
-    period: "2016 - 2018"
-  },
-  {
-    id: "backend-dev",
-    company: "DataFlow Systems",
-    period: "2014 - 2016"
-  }
+ 
 ];

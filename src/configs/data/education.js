@@ -1,18 +1,28 @@
-// src/configs/data/education.js
+import { FaGraduationCap, FaSchool, FaBook } from 'react-icons/fa';
+
 export const EDUCATION_DATA = [
   {
-    id: "computer-science",
-    school: "University of Technology",
-    year: "2010 - 2014"
+    id: "b2_cert",
+    degree: "TELC Deutsch B2 Zertifikat",
+    school: "Sprachakademie / Goethe-Institut Partner",
+    year: "2025",
+    description: "Nachweis über fortgeschrittene Deutschkenntnisse für den klinischen Bereich.",
+    icon: FaBook
   },
   {
-    id: "web-dev-bootcamp",
-    school: "Dev Academy",
-    year: "2015"
+    id: "nursing_diploma",
+    degree: "Staatliches Diplom: Krankenpflege (Infirmier Polyvalent)",
+    school: "ISPITS (Institut Supérieur des Professions Infirmières)",
+    year: "2021 - 2024",
+    description: "Spezialisierung in allgemeiner Krankenpflege und medizinischer Versorgung.",
+    icon: FaGraduationCap
   },
   {
-    id: "tdd-course",
-    school: "University of Helsinki",
-    year: "2023"
+    id: "bac",
+    degree: "Baccalauréat (Abitur) - Sciences Physiques",
+    school: "Lycée Qualifiant, Fes",
+    year: "2021",
+    description: "Allgemeine Hochschulreife mit Schwerpunkt Naturwissenschaften.",
+    icon: FaSchool
   }
 ];

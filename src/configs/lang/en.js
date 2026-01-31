@@ -12,28 +12,33 @@ export default {
     ]
   },
   nav: {
-    hero: "Home",
-    about: "About",
-    skills: "Skills",
-    projects: "Projects",
-    experience: "Experience",
-    education: "Education",
-    contact: "Contact"
+   
+    about: "Über mich",
+    nachweise: "Nachweise",
+    skills: "Fähigkeiten",
+    projects: "Projekte",
+    experience: "Erfahrung",
+    education: "Ausbildung",
+    contact: "Kontakt"
   },
+  
   sections: {
     about: "About me",
     skills: "Technical Skills",
-    projects: "Projects",
+    // projects: "Projects",
     experience: "Experience",
     education: "Education",
     contact: "Contact"
   },
   about: {
+    title: "Über mich",
     bio: [
-      "I'm a full-stack developer with experience building robust and scalable web applications.",
-      "I'm passionate about writing clean, well-tested, and maintainable code. I use TDD and CI/CD in all my projects.",
-      "Outside of coding, I enjoy sharing knowledge, contributing to open source, and learning new technologies."
-    ]
+      "Engagierte Pflegefachkraft mit fundierter Ausbildung und großer Leidenschaft für die ganzheitliche Patientenversorgung.",
+      "Mein Ziel ist es, meine fachlichen Kompetenzen und meine interkulturelle Erfahrung in das deutsche Gesundheitssystem, idealerweise in Bayern, einzubringen.",
+      "Ich verfüge über das TELC B2 Sprachzertifikat und befinde mich aktuell im Anerkennungsverfahren für meine beruflichen Qualifikationen."
+    ],
+    videoTitle: "Persönliche Vorstellung",
+    videoSubtitle: "Hören Sie mich Deutsch sprechen & erfahren Sie mehr über meine Motivation."
   },
   experience: {
     roles: {
