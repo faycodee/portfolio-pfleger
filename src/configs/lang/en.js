@@ -1,14 +1,14 @@
 // src/configs/lang/en.js
 export default {
   site: {
-    name: "Alex Morgan",
-    title: "Full-Stack Developer | React & Node.js Specialist",
-    description: "Developer with experience in modern web applications, RESTful APIs, and scalable architectures.",
+    name: "Yassine El Amrani",
+    title: "Professionelle Pflegefachkraft",
+    description: "Engagierte Pflegefachkraft mit fundierter Erfahrung in der Patientenversorgung, medizinischen Assistenz und Gesundheitsförderung.",
     heroPhrases: [
-      "Building apps with React since 2018",
-      "Clean code enthusiast",
-      "TDD Practitioner",
-      "Open Source Contributor"
+      "Fachkraft für Gesundheits- und Krankenpflege",
+      "Erfahren in der Grund- und Behandlungspflege",
+      "Zuverlässig, empathisch und belastbar",
+      "Bereit für neue Herausforderungen in Bayern"
     ]
   },
   nav: {
